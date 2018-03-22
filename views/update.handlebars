@@ -1,0 +1,55 @@
+<div>
+	<h1>Assignment 6 - Database Interactions and UI - Update Page - Benjamin Fridkis</h1>
+	
+<form id="updateRow" action="/updated" method="post">
+	<table>
+		<tbody>
+			<tr>
+				<td class="formCell formLabel"><label for="name">Name: </label></td>
+				<td class="formCell">
+					<input type="text" class="resettableInput" id="name" name="name" value="{{name}}">
+				</td>
+				<td class="formCell"></td>
+			</tr>
+			<tr>		
+				<td class="formCell formLabel"><label for="reps">Reps: </label></td>
+				<td class="formCell">
+					<input type="number" class="resettableInput" id="reps" name="reps" value="{{reps}}">
+				</td>
+				<td class="formCell"></td>
+			</tr>
+			<tr>		
+				<td class="formCell formLabel"><label for="weight">Weight: </label></td>
+				<td class="formCell">
+					<input type="number" class="resettableInput" id="weight" name="weight" value="{{weight}}">
+				</td>
+				<td class="formCell"></td>
+			</tr><tr>		
+				<td class="formCell formLabel"><label for="date">Date: </label></td>
+				<td class="formCell">
+					<input type="date" class="resettableInput" id="date" name="date" value="{{date}}">
+				</td>
+				<td class="formCell"><span class="labelText"><em>Please enter date in YYYY-MM-DD Format!</em></span></td>
+			</tr><tr>		
+				<td class="formCell formLabel"><label for="unit">Unit: </label></td>
+				<td class="formCell">
+					<input type="radio" class="resettableRadioButtons" id="lbs" name="unit" value="lbs">lbs
+					<input type="radio" class="resettableRadioButtons" id="kgs" name="unit" value="kgs">kg
+				</td>
+				<td class="formCell"></td>
+			</tr>
+		</tbody>	
+	</table>
+	<input type="hidden" id="id" name="id" value={{id}}>
+	<input id="Update Row" value="Update Row" type="submit">
+	<input class= "reset" id="reset" type="submit" name="reset" value="Reset Form">
+	<input class= "cancel" id="cancel" type="submit" name="cancel" value="Cancel">
+</form>
+
+{{#each jsscripts}}
+	<script src="{{this}}"></script>
+{{/each}}
+<script defer>attributeSelected('{{unit}}');</script>
+<script defer>updateInputValidationListener();</script>
+<script defer>resetForm();</script>
+<script defer>cancelButtonListener();</script>

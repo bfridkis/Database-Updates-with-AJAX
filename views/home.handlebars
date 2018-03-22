@@ -1,0 +1,59 @@
+<div>
+	<h1>Assignment 6 - Database Interactions and UI - Benjamin Fridkis</h1>
+	
+<table>
+	<tbody>
+		<tr>
+			<td class="formCell formLabel"><label for="name">Name: </label></td>
+			<td class="formCell">
+				<input type="text" class="resettableInput" id="name" name="name">
+			</td>
+			<td class="formCell"></td>
+		</tr>
+		<tr>		
+			<td class="formCell formLabel"><label for="reps">Reps: </label></td>
+			<td class="formCell">
+				<input type="number" class="resettableInput" id="reps" name="reps">
+			</td>
+			<td class="formCell"></td>
+		</tr>
+		<tr>		
+			<td class="formCell formLabel"><label for="weight">Weight: </label></td>
+			<td class="formCell">
+				<input type="number" class="resettableInput" id="weight" name="weight">
+			</td>
+			<td class="formCell"></td>
+		</tr><tr>		
+			<td class="formCell formLabel"><label for="date">Date: </label></td>
+			<td class="formCell">
+				<input type="date" class="resettableInput" id="date" name="date">
+			</td>
+			<td class="formCell"></td>
+		</tr><tr>		
+			<td class="formCell formLabel"><label for="unit">Unit: </label></td>
+			<td class="formCell">
+				<input type="radio" class="resettableRadioButtons" id="lbs" name="unit" value="lbs" checked>lbs
+				<input type="radio" class="resettableRadioButtons" id="kgs" name="unit" value="kgs">kg
+			</td>
+			<td class="formCell"></td>
+		</tr>
+	</tbody>	
+</table>
+<input id="addRow" value="Add Row" type="submit">
+<input class= "reset" id="reset" type="submit" name="reset" value="Reset Form">
+
+<!-- Awkward spacing here to eliminate spurious text nodes in table -->
+<table><thead>
+<th>Name</th>
+<th>Reps</th>
+<th>Weight</th>
+<th>Date</th>
+<th>Unit</th>
+</thead><tbody></tbody></table>
+
+{{#each jsscripts}}
+	<script src="{{this}}"></script>
+{{/each}}
+<script defer>loadTable("GET");</script>
+<script defer>addRow(loadTable);</script>
+<script defer>resetForm();</script>
