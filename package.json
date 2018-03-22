@@ -21,14 +21,14 @@
   "keywords": [
     "node",
     "heroku",
-    "express"
-	  "express-handlebars",
-	  "mysql",
-	  "ajax",
-	  "ajax-request",
-	  "javascript",
-	  "cleardb",
-	  "http-request",
+    "express",
+	"express-handlebars",
+	"mysql",
+	"ajax",
+	"ajax-request",
+	"javascript",
+	"cleardb",
+	"http-request"
   ],
   "license": "MIT"
 }
