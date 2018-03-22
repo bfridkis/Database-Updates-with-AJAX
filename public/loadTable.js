@@ -1,10 +1,10 @@
 function loadTable(method, urlSuffix, data){
 	var req = new XMLHttpRequest();
 	if(urlSuffix){	
-		req.open(method, 'http://flip2.engr.oregonstate.edu:6705/' + urlSuffix, true);
+		req.open(method, '/' + urlSuffix, true);
 	}
 	else{
-		req.open(method, 'http://flip2.engr.oregonstate.edu:6705/', true);
+		req.open(method, '/', true);
 	}
 	if(method !== "GET"){
 		req.setRequestHeader('Content-Type', 'application/json');
